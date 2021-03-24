@@ -28,7 +28,7 @@ def main():
 	PlayerHandler("__^__^_//*v*//", "brackets/blake.bracket", tournament)
 	PlayerHandler("Little Dribble", "brackets/adam.bracket", tournament)
 	PlayerHandler("winner_ganadora", "brackets/an.bracket", tournament)
-	PlayerHandler("At Least No Dude", "brackets/duke.bracket", tournament)
+	PlayerHandler("At Least No Duke", "brackets/duke.bracket", tournament)
 	PlayerHandler("The 'Eyes Have It", "brackets/eyes.bracket", tournament)
 	PlayerHandler("Thundering Ferd", "brackets/ferd.bracket", tournament)
 	PlayerHandler("JakeSickAFBracket", "brackets/jake.bracket", tournament)
