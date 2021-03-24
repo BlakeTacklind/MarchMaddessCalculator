@@ -19,23 +19,23 @@ class PlayerHandler(object):
 		self.tieProbablity = 0.0
 
 	def __str__(self):
-		return f"{self.name} wins {self.winProbablity} ties {self.tieProbablity}"
+		return f"\"{self.name}\" has a {round(self.winProbablity * 100, 3)} % chance of winning. Goes to tie breaker {round(self.tieProbablity * 100, 3)} % of the time"
 
 def main():
 	tournament = Tournament()
 	startingPoint = LoadBracket('brackets/actual.bracket', tournament, 2)
 
-	PlayerHandler("blake", "brackets/blake.bracket", tournament)
-	PlayerHandler("adam", "brackets/adam.bracket", tournament)
-	PlayerHandler("an", "brackets/an.bracket", tournament)
-	PlayerHandler("duke", "brackets/duke.bracket", tournament)
-	PlayerHandler("eyes", "brackets/eyes.bracket", tournament)
-	PlayerHandler("ferd", "brackets/ferd.bracket", tournament)
-	PlayerHandler("jake", "brackets/jake.bracket", tournament)
-	PlayerHandler("spence", "brackets/spence.bracket", tournament)
-	PlayerHandler("steve", "brackets/steve.bracket", tournament)
-	PlayerHandler("tlaw", "brackets/tlaw.bracket", tournament)
-	PlayerHandler("rob", "brackets/rob.bracket", tournament)
+	PlayerHandler("__^__^_//*v*//", "brackets/blake.bracket", tournament)
+	PlayerHandler("Little Dribble", "brackets/adam.bracket", tournament)
+	PlayerHandler("winner_ganadora", "brackets/an.bracket", tournament)
+	PlayerHandler("At Least No Dude", "brackets/duke.bracket", tournament)
+	PlayerHandler("The 'Eyes Have It", "brackets/eyes.bracket", tournament)
+	PlayerHandler("Thundering Ferd", "brackets/ferd.bracket", tournament)
+	PlayerHandler("JakeSickAFBracket", "brackets/jake.bracket", tournament)
+	PlayerHandler("Wackabrack", "brackets/spence.bracket", tournament)
+	PlayerHandler("Steven Kerr", "brackets/steve.bracket", tournament)
+	PlayerHandler("TLaw and Order", "brackets/tlaw.bracket", tournament)
+	PlayerHandler("Animal Fries", "brackets/rob.bracket", tournament)
 
 	totalProbabilty = 0.0
 	# for i in range(50):
@@ -68,7 +68,7 @@ def main():
 		# print()
 
 	print(totalProbabilty)
-	for player in PlayerHandler.ALL:
+	for player in sorted(PlayerHandler.ALL, key=lambda player: -player.winProbablity):
 		print(player)
 
 if __name__ == '__main__':
